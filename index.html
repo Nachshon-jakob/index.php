@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>YTC Canteen</title>
+        <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+        <script> 
+        $(function() {
+            $("#icecream1, #candy1, #soda1, #chips1").click(function() {
+                $("h2, h1, h3").fadeOut(3000);  
+                $("h2, h1, h3").fadeIn(3000);
+            })
+        });
+    $(function() {   
+            $("#icecream1").click(function() {
+                $("#ice-type").toggle();
+				$("#candy1, #soda1, #chips1, #hotfood1").slideToggle(100);
+            });
+                });
+        $(function() {
+            $("#candy1").click(function() {
+                $("#candy-type").toggle(); 
+				$("#icecream1, #soda1, #chips1, #hotfood1").slideToggle(100);
+            });
+        });
+        $(function() {
+            $("#soda1").click(function() {
+                $("#soda-type").toggle();
+				$("#icecream1, #chips1, #candy1, #hotfood1").toggle(100);
+            });
+        });
+        $(function() {
+            $("#chips1").click(function() {
+                $("#chip-type").toggle(); 
+				$("#icecream1, #soda1, #candy1, #hotfood1").slideToggle(100);
+            });
+        });
+        $(function(){
+            $("#hotfood1").click(function() {
+            $("#hot_type").toggle();
+                $("#icecream1, #soda1, #candy1, #chips1").slideToggle(100);
+            });
+        });
+            
+			$(function() {
+		    var ckbox = $('#nestle-cone, #ice-sandwhich, #ice-cookie, #sour-sticks, #licorice, #chocalate, #coke, #sprite, #pepsi, #bbq, #pretzels, #nacho, #burgers2, #hotdogs2, #fries2');
+    $('#button').on('click',function () {
+        if (ckbox.is(':checked') && (confirm("Order Confirmed?")) == true) {
+            alert('Your order has been taken');
+        } else {
+            return null;
+        }
+    });
+});
+                        $(function() {
+              $("#nacho_quant").change(function() {
+                  var pric = $("#nacho_quant").val() * .5;
+                  return $("#price-num").text("$" + pric + " ");
+                });
+              });
+                                    $(function() {
+              $("#bbq_quant").change(function() {
+                  var pric = $("#bbq_quant").val() * .5;
+                  return $("#price-num").text("$" + pric + " ");
+                });
+              });
+                                    $(function() {
+              $("#pretzels_quant").change(function() {
+                  var pric = $("#pretzels_quant").val() * .5;
+                  return $("#price-num").text("$" + pric + " ");
+                });
+              });
+                                    $(function() {
+              $("#coke_quant").change(function() {
+                  var pric = $("#coke_quant").val() * .5;
+                 return $("#price-num").text("$" + pric + " ");
+                });
+              });
+                                    $(function() {
+              $("#pepsi_quant").change(function() {
+                  var pric = $("#pepsi_quant").val() * .5;
+                  return $("#price-num").text("$" + pric + " ");
+                });
+              });
+                                    $(function() {
+              $("#sprite_quant").change(function() {
+                  var pric = $("#sprite_quant").val() * .5;
+                  return $("#price-num").text("$" + pric + " ");
+                });
+              });
+                                    $(function() {
+              $("#sour-sticks_quant").change(function() {
+                  var pric = $("#sour-sticks_quant").val() * .35;
+                  return $("#price-num").text("$" + pric + " ");
+                });
+              });
+                                    $(function() {
+              $("#licorice_quant").change(function() {
+                  var pric = $("#licorice_quant").val() * .25;
+                  return $("#price-num").text("$" + pric + " ");
+                });
+              });
+                                    $(function() {
+              $("#chocalate_quant").change(function() {
+                  var pric = $("#chocalate_quant").val() * .35;
+                  return $("#price-num").text("$" + pric + " ");
+                });
+              });
+            
+                                                $(function() {
+              $("#ice-sandwhich_quant").change(function() {
+                  var pric = $("#ice-sandwhich_quant").val() * .85;
+                  return $("#price-num").text("$" + pric + " ");
+                });
+              });
+                            
+            $(function() {
+                    $("#nestle-cone_quant").change(function() {
+                       var pric = $("#nestle-cone_quant").val() * 1;
+                       return $("#price-num").text("$" + pric + "");
+                        });
+                    });
+                        $(function() {
+                    $("#hotdogs_quant").change(function() {
+                       var pric = $("#hotdogs_quant").val() * 1.75;
+                        });
+                    });
+                                $(function() {
+                    $("#fries_quant").change(function() {
+                       var pric = $("#fries_quant").val() * 1.50;
+                        });
+                    });
+                        $(function() {
+                    $("#burgers_quant").change(function() {
+                       var pric = $("#burgers_quant").val() * 2;
+                        });
+                    });            
+            
+            $(function() {
+                function calcprice() {
+                    var ice_sandwhich = $("#ice-sandwhich_quant").val() * .85,
+                    nestle_cone_quant = $("#nestle-cone_quant").val() * 1,
+                    total =  ice_sandwhich * nestle_cone_quant;
+                }
+                $("#ice-sandwhich_quant, #nestle-cone_quant").keyup(calcprice);
+            })
+            
+            
+        </script>
+    </head>
+    <body id="body">
+        <div class="header">
+        <h1>Yeshivas Toras Chaim Canteen</h1>
+        <h2>Serving Anyone within Toras Chaim Walls who wants some Grub!</h2> 
+        </div>
+         <h3>Order Here:</h3>
+		<form class="canteen_form"  id="form4" action="processing.php" method="post">
+        <div class="pass_user" id="pass-user">
+            <table> 
+            <tr id="user-title">Your name: </tr><input type="text" class="verif" id="user" required="required" name="username" placeholder="Your name"><br /><span class="errors" id="user-error"></span>
+            </table>
+             <h6 id="click_me" style="margin:0;padding: 0;font-size: 20px;color: #ffffff;font-family: 'Merienda', cursive;">Click Main Item To Go Backward or Forward</h6>
+        </div>
+        <div id="icecream1">
+        <input type="checkbox" id="icecream">Icecream<br />
+        </div>
+        <div id="ice-type">
+        <input type="hidden" id="nestle-cone2" name="nestle_cone1">
+        <input type="checkbox" id="nestle-cone" name="nestle_cone1" value="1" action="nestle_cone();">Nestle cone: $1
+        <input type="number" class="quantbox" id="nestle-cone_quant" name="nestle_cone_quant1" value="1" min="1" max="10"><br />
+        <input type="hidden" id="ice-sandwhich2" name="ice_sandwhich1" value="0">
+        <input type="checkbox" id="ice-sandwhich" name="ice_sandwhich1" value="1">Sandwhich: .85
+        <input type="number" class="quantbox" id="ice-sandwhich_quant" name="ice_sandwhich_quant1" value="1" min="1" max="10"><br />
+        <input type="hidden" id="ice-cookie2" name="ice_cookie1" value="0">
+        <input type="checkbox" id="ice-cookie" name="ice_cookie1" value="1">Cookie sandwhich: $1
+        <input type="number" class="quantbox" id="ice-cookie_quant" name="ice_cookie_quant1" value="1" min="1" max="10"><br />
+        </div>
+        <div id="candy1">
+        <input type="checkbox" id="candy">Candy<br />
+        </div>
+        <div id="candy-type">
+        <input type="hidden" id="chocalate2" name="chocalate1" value="0">
+        <input type="checkbox" id="chocalate" name="chocalate1" value=".35">Mini Chocalate: .35
+        <input type="number" class="quantbox" id="chocalate_quant" name="chocalate_quant1" value="1" min="1" max="10"><br />
+        <input type="hidden" id="licorice2" name="licorice1" value="0">
+        <input type="checkbox" id="licorice" name="licorice1" value=".25">Licorice: .25
+        <input type="number" class="quantbox" id="licorice_quant" name="licorice_quant1" value="1" min="1" max="10"><br />
+        <input type="hidden" id="sour-sticks2" name="sour_sticks1" value="0">
+        <input type="checkbox" id="sour-sticks" name="sour_sticks1" value=".35">Sour Sticks: .35
+        <input type="number" class="quantbox" id="sour-sticks_quant" value="1" name="sour_sticks_quant1" min="1" max="10"><br/>
+        </div>
+        <div id="soda1">
+        <input type="checkbox" id="soda">Soda<br />
+        </div>
+        <div id="soda-type">
+        <input type="hidden" id="coke2" name="coke1" value="0">
+        <input type="checkbox" id="coke" name="coke1" value=".50">Coke: .50
+        <input type="number" class="quantbox" id="coke_quant" value="1" min="1" max="10" name="coke_quant1"><br /> 
+        <input type="hidden" id="sprite2" name="sprite1" value="0">
+        <input type="checkbox" id="sprite" name="sprite1" value=".50">Sprite: .50
+        <input type="number" class="quantbox" id="sprite_quant" value="1" min="1" max="10" name="sprite_quant"><br />
+        <input type="hidden" id="pepsi2" name="pepsi1" value="0">
+        <input type="checkbox" id="pepsi" name="pepsi1" value=".50">Pepsi: .50
+        <input type="number" class="quantbox" id="pepsi_quant" value="1" min="1" max="10" name="pepsi_quant1"><br />
+            </div>
+            <div id="chips1">
+            <input type="checkbox" id="chips">Chips<br />
+            </div>
+            <div id="chip-type">
+            <input type="hidden" id="bbq2" name="bbq1" value="0">
+            <input type="checkbox" id="bbq" name="bbq1" value=".50">BBQ: .50
+            <input type="number" id="bbq_quant" class="quantbox" value="1" min="1" max="10" name="bbq_quant1"><br />
+            <input type="hidden" id="pretzels2" name="pretzels1" value="0">
+            <input type="checkbox" id="pretzels" name="pretzels1" value=".50">Pretzels: .50
+            <input type="number" id="pretzels_quant" class="quantbox" name="pretzels_quant1" value="1" min="1" max="10"><br />
+            <input type="hidden" id="nacho2" name="nacho1" value="0">
+            <input type="checkbox" id="nacho" name="nacho1" value=".50">Nachos: .50
+            <input type="number" id="nacho_quant" class="quantbox" value="1" min="1" max="10" name="nacho_quant1"><br />
+            </div>
+            <div id="hotfood1">
+            <input type="checkbox" id="hotfood">Hot Food<br />
+            </div>
+            <div id="hot_type">
+            <input type="checkbox" id="burgers2" name="burgers1" value="2">Sliders: $2<input type="number" id="burgers_quant" name="burgers_quant1" value="1" min="1" max="10"><br />
+            <input type="checkbox" id="hotdogs2" name="hotdogs1" value="1.75">Hot Dogs: $1.75<input type="number" id="hotdogs_quant" name="hotdogs_quant1" value="1" min="1" max="10"><br />
+            <input type="checkbox" id="fries2" name="fries1" value="1">French Fries $1.50<input type="number" id="fries_quant" name="fries_quant1" value="1" min="1" max="10"><br />
+            </div>
+        <h4 id="price-num" name="total"></h4>
+		<div class="button-1">
+            <input type="submit" id="button" value="Confirm" name="submit"><br />
+        </div>
+        </form>
+    </body>
+</html>
